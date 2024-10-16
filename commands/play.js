@@ -108,6 +108,14 @@ async function play(client, interaction) {
     }
 }
 
+function isValidURL(url) {
+    try {
+        new URL(url);
+        return true;
+    } catch (_) {
+        return false;
+    }
+}
 module.exports = {
     name: "play",
     description: "Play a song from a name or link",
