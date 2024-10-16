@@ -1,5 +1,5 @@
 const { EmbedBuilder } = require('discord.js');
-
+const config = require("../config.js");
 module.exports = {
   name: "support",
   description: "Get support server link",
