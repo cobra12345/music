@@ -84,9 +84,10 @@ async function play(client, interaction) {
             .setColor(config.embedColor)
             .setAuthor({
                 name: 'Request Update',
-                iconURL: config.CheckmarkIcon,
-                url: config.SupportServer
+                iconURL: config.CheckmarkIcon && isValidURL(config.CheckmarkIcon) ? config.CheckmarkIcon : null,
+                url: config.SupportServer && isValidURL(config.SupportServer) ? config.SupportServer : null
             })
+
             .setDescription('**➡️ Your request has been successfully processed.**\n**➡️ Please use buttons to control playback**')
             .setFooter({ text: '🎶 Enjoy your music!' });
 
