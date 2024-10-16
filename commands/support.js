@@ -18,7 +18,6 @@ module.exports = {
               url: 'https://discord.gg/Y3fvqDAQX7'
           })
             .setDescription(`➡️ **Join our Discord server for support and updates:**\n- Discord - ${supportServerLink}`),
-            .setTimestamp();
 
       return interaction.reply({ embeds: [embed] });
     } catch (e) {
